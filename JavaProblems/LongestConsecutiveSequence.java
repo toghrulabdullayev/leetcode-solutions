@@ -9,7 +9,7 @@ public int longestConsecutive(int[] nums) {
     int longest = 0;
     // Iterate through the set: O(n)
     for (int num : numSet) {
-        // check if it's the start of a sequence: O(1)
+        // check if it's the start of a sequence by looking up for its supposedly previous number: O(1)
         if (!numSet.contains(num - 1)) {
             int length = 0;
             // if 100 is the start, length becomes 1 and it looks-up for 100 + 1, 100 + 2 and etc: O(1)
@@ -24,7 +24,7 @@ public int longestConsecutive(int[] nums) {
     return longest;
 }
 
-// Overall complexity (as required): O(n)
+// Overall time complexity (as required): O(n)
 void main() {
     System.out.println(longestConsecutive(new int[]{100, 4, 200, 1, 3, 2}));
     System.out.println(longestConsecutive(new int[]{0, 3, 7, 2, 5, 8, 4, 6, 0, 1}));

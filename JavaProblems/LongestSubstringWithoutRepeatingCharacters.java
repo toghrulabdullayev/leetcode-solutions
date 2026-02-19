@@ -4,7 +4,7 @@ public int lengthOfLongestSubstring(String s) {
     int left = 0;
     int res = 0;
 
-    // moving right side of the sliding window
+    // moving right side of the sliding window: O(n)
     for (int right = 0; right < s.length(); right++) {
         // if right side contains the char, remove it from the left side and move the left side: both O(1)
         while (charSet.contains(s.charAt(right))) {
@@ -20,6 +20,7 @@ public int lengthOfLongestSubstring(String s) {
     return res;
 }
 
+// Overall time complexity: O(n)
 void main() {
     System.out.println(lengthOfLongestSubstring("abcabcbb"));
     System.out.println(lengthOfLongestSubstring("bbbbb"));
