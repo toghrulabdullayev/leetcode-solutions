@@ -21,6 +21,7 @@ public boolean validTree(int n, int[][] edges) {
 
     Set<Integer> visit = new HashSet<>();
 
+    // in Python or other languages, adj and visit data structures will be declared globally instead of being passed as params
     if (!dfs(0, -1, adj, visit)) {
         return false;
     }
