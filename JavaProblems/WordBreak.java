@@ -14,6 +14,7 @@ public boolean wordBreak(String s, List<String> wordDict) {
     return dp[0];
 }
 
+// Overall time complexity: O(n * m * t) [n = s.length, m = number of words, t = max word length]
 void main() {
     System.out.println(wordBreak("leetcode", new ArrayList<>(Arrays.asList("leet", "code"))));
     System.out.println(wordBreak("applepenapple", new ArrayList<>(Arrays.asList("apple", "pen"))));
